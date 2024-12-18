@@ -15,11 +15,13 @@ After sorting the array is: 9,13,20,24,46,52
 using namespace std;
 
 void insertion_shorting( int arr[], int n) {
-    for (int i = 0; i <= n -1; i++)
+    for (int i = 0; i <= n - 1; i++)  // This loop picks up one number at a time (just like picking up a car).
     {
         int j = i;
-        while ( j > 0 && arr[j - 1 ] > arr[j])
+        while ( j > 0 && arr[j - 1 ] > arr[j]) /*  Here, you compare the number you picked (arr[j]) with the one before it (arr[j - 1]).
+If the number before is bigger, swap them! Keep swapping until you find the right spot.*/
         {
+            // If the number you’re holding is smaller than the one before it, they switch places:
             int temp = arr[ j - 1 ];
             arr[ j - 1 ]= arr[j];
             arr[j]= temp;
